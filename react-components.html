@@ -15,12 +15,20 @@
 		var StevensComponent = React.createClass({
 			render: function() {
 				return(
-					<h1>Code and Rockets</h1>
+					<h1>{this.props.user} likes to eat {this.props.food}</h1>
 					);
 			}
 		});
 
-		React.render(<StevensComponent />, document.getElementById('content'));
+		React.render(
+			<div>
+				<StevensComponent user="steven" food="hotdog"/>
+				<StevensComponent user="angela" food="cheese"/>
+				<StevensComponent user="robert" food="burger"/>
+				<StevensComponent user="adam" food="pizza"/>
+			</div>, 
+			document.getElementById('content')
+			);
 
 	</script>
 
